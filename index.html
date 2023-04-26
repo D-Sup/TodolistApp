@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>나만의 메모장 앱</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="wrapper-header">
+            <div class="circle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewBox="0 0 54 14">
+                    <g fill="none" fill-rule="evenodd" transform="translate(1 1)">
+                        <circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"></circle>
+                        <circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"></circle>
+                        <circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"></circle>
+                    </g>
+                </svg>
+            </div>
+            <h1 class="username">DongSup</h1>
+        </header>
+        <main class="main">
+            <nav class="navbar">
+                <article class="weather-widget">
+                    <h2 class="a11y-hidden">날씨 위젯</h2>
+                </article>
+                <div class="flip-container">
+                    <ul class="explain">
+                        <li>
+                            <div class="flipper">
+                                <div class="front">
+                                    <img src="./img/weather.svg" alt="날씨 아이콘">
+                                </div>
+                                <div class="back">
+                                    <p>weather</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flipper">
+                                <div class="front">
+                                    <img src="./img/todo.svg" alt="list 아이콘">
+
+                                </div>
+                                <div class="back">
+                                    <p>Todo list</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flipper">
+                                <div class="front">
+                                    <img src="./img/deadline.svg" alt="시계 아이콘">
+
+                                </div>
+                                <div class="back">
+                                    <p>Calculate D-Day</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <a class="logout" onClick="window.location.reload()" style="cursor: pointer;">Log Out</a>
+            </nav>
+            <section class="main-area">
+                <form class="todo-form">
+                    <label for="todo-inpt" class="a11y-hidden">todo리스트 입력 창</label>
+                    <textarea id="todo-inpt" name="story"
+                        placeholder="디데이기능 사용 예시) '06301230 멋사 수료 날' 입력 후 클릭"></textarea>
+                    <button type="submit" class="submit-btn"><img src="./img/plus.svg" alt=""></button>
+                </form>
+                <ul class="todo-list">
+                </ul>
+                <button class="clear-btn">clear</button>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
